@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="lab-4-9"/>
+        <attribute name="authors" value="User"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-07-14 11:07:33 AM"/>
+        <attribute name="created" value="VXNlcjtERVNLVE9QLUozOVAxTlQ7MjAyNi0wNy0xNDsxMTowMDoxNiBBTTsyNzMx"/>
+        <attribute name="edited" value="VXNlcjtERVNLVE9QLUozOVAxTlQ7MjAyNi0wNy0xNDsxMTowNzozMyBBTTsxOzI4NDU="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="gb" type="Integer" array="False" size=""/>
+            <input variable="gb"/>
+            <assign variable="planA" expression="10 + gb"/>
+            <if expression="gb &lt;= 20">
+                <then>
+                    <assign variable="planB" expression="25"/>
+                </then>
+                <else>
+                    <assign variable="planB" expression="25 + (gb-20) * 3"/>
+                </else>
+            </if>
+            <if expression="planA &lt; planB">
+                <then>
+                    <assign variable="bill" expression="planA"/>
+                </then>
+                <else>
+                    <assign variable="bill" expression="planB"/>
+                </else>
+            </if>
+            <declare name="bill" type="Integer" array="False" size=""/>
+            <output expression="bill" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

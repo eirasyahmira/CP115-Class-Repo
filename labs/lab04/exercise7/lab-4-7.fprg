@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="lab-4-7"/>
+        <attribute name="authors" value="User"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-07-14 10:51:09 AM"/>
+        <attribute name="created" value="VXNlcjtERVNLVE9QLUozOVAxTlQ7MjAyNi0wNy0xNDsxMDo0MzoyMyBBTTsyNzM1"/>
+        <attribute name="edited" value="VXNlcjtERVNLVE9QLUozOVAxTlQ7MjAyNi0wNy0xNDsxMDo1MTowOSBBTTsxOzI4NDY="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="tempRoom" type="Integer" array="False" size=""/>
+            <input variable="tempRoom"/>
+            <declare name="tempTarget" type="Integer" array="False" size=""/>
+            <input variable="tempTarget"/>
+            <if expression="tempRoom &lt; tempTarget">
+                <then>
+                    <assign variable="power" expression="(tempTarget - tempRoom) * 10"/>
+                </then>
+                <else>
+                    <if expression="tempRoom &gt; tempTarget">
+                        <then>
+                            <assign variable="power" expression="(tempRoom - tempTarget) * 8"/>
+                        </then>
+                        <else>
+                            <assign variable="power" expression="0"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <if expression="power &gt; 100">
+                <then>
+                    <assign variable="power" expression="100"/>
+                </then>
+                <else/>
+            </if>
+            <declare name="power" type="Integer" array="False" size=""/>
+            <output expression="power" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

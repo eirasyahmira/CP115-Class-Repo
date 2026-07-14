@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="lab-4-4"/>
+        <attribute name="authors" value="User"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-07-14 10:18:02 AM"/>
+        <attribute name="created" value="VXNlcjtERVNLVE9QLUozOVAxTlQ7MjAyNi0wNy0xNDsxMDoxMDoxMCBBTTsyNzI1"/>
+        <attribute name="edited" value="VXNlcjtERVNLVE9QLUozOVAxTlQ7MjAyNi0wNy0xNDsxMDoxODowMiBBTTsxOzI4NDI="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="weight" type="Integer" array="False" size=""/>
+            <input variable="weight"/>
+            <declare name="ticketPrice" type="Integer" array="False" size=""/>
+            <input variable="ticketPrice"/>
+            <if expression="weight == 0">
+                <then>
+                    <assign variable="price" expression="10"/>
+                </then>
+                <else>
+                    <if expression="weight &gt; 15">
+                        <then>
+                            <assign variable="extra" expression="weight - 15"/>
+                            <assign variable="price" expression="extra * 4"/>
+                        </then>
+                        <else/>
+                    </if>
+                    <declare name="finalPrice" type="Integer" array="False" size=""/>
+                    <output expression="finalPrice" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
